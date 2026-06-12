@@ -1,0 +1,6 @@
+{
+  "name": "ASCII Art Paint",
+  "description": "An interactive ASCII art canvas and drawing suite featuring canvas painting, multi-color support, local library, image-to-ASCII conversions, and Gemini-guided ASCII generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

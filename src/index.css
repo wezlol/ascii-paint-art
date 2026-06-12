@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* CRT monitor phosphor look */
+  .crt-glow {
+    text-shadow: 0 0 3px rgba(0, 255, 65, 0.4), 0 0 10px rgba(0, 255, 65, 0.1);
+  }
+  .crt-glow-pink {
+    text-shadow: 0 0 3px rgba(244, 114, 182, 0.4), 0 0 10px rgba(244, 114, 182, 0.1);
+  }
+  .crt-glow-gold {
+    text-shadow: 0 0 3px rgba(245, 158, 11, 0.4), 0 0 10px rgba(245, 158, 11, 0.1);
+  }
+}
+
+/* Monospace tight scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+  border-left: 1px solid #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* CRT flickering scanlines */
+@keyframes crt-flicker {
+  0% { opacity: 0.985; }
+  50% { opacity: 1; }
+  100% { opacity: 0.99; }
+}
+
+.crt-monitor {
+  animation: crt-flicker 0.15s infinite;
+}
+
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.05),
+    rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.05)
+  );
+  background-size: 100% 3px, 3px 100%;
+}
